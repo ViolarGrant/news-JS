@@ -17,7 +17,7 @@ const apiUrl = 'https://newsapi.org/v2/';
 const apiKey = 'dc9ca8f058e14a779f7e3bc7b66ef592';
 
 async function fetchNews() {
-    const response = await fetch(`${apiUrl}everything?q=tesla&from=2024-11-10&sortBy=publishedAt&apiKey=${apiKey}`);
+    const response = await fetch(`${apiUrl}top-headlines?sources=techcrunch&apiKey=${apiKey}`);
     const obj = await response.json();
     console.log(obj.articles);
     renderNews(obj.articles);
